@@ -28,15 +28,19 @@ public class Program {
         for (Seller s : sellers) {
             System.out.println(s);
         }
-        /*System.out.println("==== Test 4: seller insert =====");
+        System.out.println("==== Test 4: seller insert =====");
         Seller newSeller = new Seller( null,"Marcos", "marcos@gmail.com", new Date(), 4000.0, department);
         sellerDao.insert(newSeller);
-        System.out.println("Inserted: " + newSeller.getId());*/
+        System.out.println("Inserted: " + newSeller.getId());
 
         System.out.println("==== Test 5: seller update ====");
         seller = sellerDao.findById(1);
         seller.setName("Maria");
         sellerDao.update(seller);
         System.out.println(seller);
+
+        System.out.println("==== Test 5: seller update ====");
+        sellerDao.deleteById(8);
+        System.out.println("Deleted complete");
     }
 }
